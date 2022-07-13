@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1 class="text text-primary text-center">Cargar videojuego</h1>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <table class="table">
+                <thead>
+                    <tr>
+
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Precio</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let video of listarJuegos">
+
+                        <td>{{video.nombre}}</td>
+                        <td>{{video.precio}}</td>
+
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

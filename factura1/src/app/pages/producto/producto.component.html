@@ -1,0 +1,85 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h3>Sistema de facturación</h3>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col">
+            <h3>Productos</h3>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col">
+
+            <table class="table">
+                <thead>
+                    <tr>
+
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Marca</th>
+                        <th scope="col">Precio</th>
+                        <th scope="col">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let prod of productos">
+
+                        <td>{{prod.nombre}}</td>
+                        <td>{{prod.marca}}</td>
+                        <td>{{prod.precio}}</td>
+                        <td>
+                            <button (click)="agregarProducto(prod)" class="btn btn-primary">Agregar</button>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+
+            <table class="table">
+                <thead>
+                    <tr>
+
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Marca</th>
+                        <th scope="col">Precio</th>
+                        <th scope="col">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let prodSelec of productosSeleccionados; let i=index">
+
+                        <div hidden=t rue>
+                            <td>{{i}}</td>
+
+                        </div>
+                        <td>{{prodSelec.nombre}}</td>
+                        <td>{{prodSelec.marca}}</td>
+                        <td>{{prodSelec.precio}}</td>
+                        <td>
+                            <button (click)="eliminarProducto(i)" class="btn btn-danger">Eliminar</button>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+
+
+        </div>
+    </div>
+
+
+</div>

@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <app-hijo2 (enviar)="obtenerMensaje($event)"></app-hijo2>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+
+            <input type="number" class="form-control" placeholder="Ingrese valor" [(ngModel)]="valorUno">
+            <input type="number" class="form-control" placeholder="Ingrese valor" [(ngModel)]="valorDos">
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col">
+            <button (click)="acciones(1)" class="btn btn-primary">sumar</button>
+            <button (click)="acciones(2)" class="btn btn-danger">restar</button>
+            <button (click)="acciones(3)" class="btn btn-success">multiplicar</button>
+            <button (click)="acciones(4)" class="btn btn-warning">dividir</button>
+        </div>
+    </div>
+
+
+
+    <app-hijo [resultado]="resultadoPadre"></app-hijo>
+
+</div>
