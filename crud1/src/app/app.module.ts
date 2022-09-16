@@ -8,6 +8,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {HttpClientModule} from '@angular/common/http';
 import { PersonaComponent } from './pages/persona/persona.component';
 import { NavbarComponent } from './pages/navbar/navbar.component';
+import { PersonaEditarComponent } from './pages/persona/editar/persona-editar/persona-editar.component';
+
 
 
 
@@ -16,6 +18,8 @@ import { NavbarComponent } from './pages/navbar/navbar.component';
     AppComponent,
     PersonaComponent,
     NavbarComponent,
+    PersonaEditarComponent,
+ 
 
   ],
   imports: [
