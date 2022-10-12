@@ -9,6 +9,7 @@ import {HttpClientModule} from '@angular/common/http';
 import { PersonaComponent } from './pages/persona/persona.component';
 import { NavbarComponent } from './pages/navbar/navbar.component';
 import { PersonaEditarComponent } from './pages/persona/editar/persona-editar/persona-editar.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -27,7 +28,8 @@ import { PersonaEditarComponent } from './pages/persona/editar/persona-editar/pe
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-     MaterialModule
+     MaterialModule,
+     ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,21 +1,32 @@
-<mat-toolbar>
-    <span>Cargar Persona</span>
-</mat-toolbar>
-
-<mat-form-field class="example-full-width" appearance="fill">
-    <mat-label>Nombre</mat-label>
-    <input matInput>
-</mat-form-field>
-
-<mat-form-field class="example-full-width" appearance="fill">
-    <mat-label>Apellido</mat-label>
-    <input matInput>
-</mat-form-field>
-
-<mat-form-field class="example-full-width" appearance="fill">
-    <mat-label>Dni</mat-label>
-    <input matInput>
-</mat-form-field>
+<form [formGroup]="formularioPersona" (submit)="accion()" class="example-form">
 
 
-falta agregar form
+    <div [hidden]="true">
+        <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>id</mat-label>
+            <input matInput formControlName="id">
+        </mat-form-field>
+    </div>
+
+
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Nombre</mat-label>
+        <input matInput formControlName="nombre">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Apellido</mat-label>
+        <input matInput formControlName="apellido">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Dni</mat-label>
+        <input matInput formControlName="dni">
+    </mat-form-field>
+
+
+    <button class="example-button-row" mat-raised-button type="submit" color="primary">Guardar</button>
+    <button class="example-button-row" routerLink="/listarPersonas" mat-raised-button type="button" color="accent">Cancelar</button>
+
+
+</form>
